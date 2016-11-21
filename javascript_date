@@ -1,18 +1,23 @@
 <script type="text/javascript">
 var Dates = new Date();
-var year = Dates.getFullYear(); //不用getYear() 避免Y2K問題
-var month = Dates.getMonth()+1;//[0]~[11] = 1月~12月
+var year = Dates.getFullYear(); 
+var month = Dates.getMonth()+1;
 var firstDay = month + "/"+"01/"+year;
 
 console.log(firstDay)
 
 Dates = new Date(year,month,0);
-//取得某月天數//日期中的日固定設為 0。例如 2014 的 2月份天數為。days 即是當月天數28
-//ex: var days = new Date(2014,2,0).getDate();
-
 
 var lastDay = month +"/"+ Dates.getDate()+"/"+year;
 console.log(lastDay)
 
 </script>
 
+
+//2.不用getYear() 避免Y2K問題
+
+//5.[0]~[11] = 1月~12月
+
+//9.日期中的日設為 0、取得當月總天數。
+//例如 2014 的 2月份天數為。days 即是當月天數28
+//ex: var days = new Date(2014,2,0).getDate();
