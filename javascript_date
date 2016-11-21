@@ -1,0 +1,15 @@
+<script type="text/javascript">
+var Dates = new Date();
+var year = Dates.getFullYear(); //不用getYear() 避免Y2K問題
+var month = Dates.getMonth()+1;//[0]~[11] = 1月~12月
+var firstDay = month + "/"+"01/"+year;
+console.log(firstDay)
+Dates = new Date(year,month,0)
+//取得某月天數//日期中的日固定設為 0。例如 2014 的 2月份天數為。days 即是當月天數
+//var days = new Date(2014,2,0).getDate();
+//28
+var lastDay = month +"/"+ Dates.getDate()+"/"+year;
+console.log(lastDay)
+
+</script>
+
